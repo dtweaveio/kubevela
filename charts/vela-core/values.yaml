@@ -48,7 +48,7 @@ imageRegistry: ""
 ## @param image.tag Image tag
 ## @param image.pullPolicy Image pull policy
 image:
-  repository: oamdev/vela-core
+  repository: registry.cn-hangzhou.aliyuncs.com/dtweave/vela-core
   tag: latest
   pullPolicy: Always
 
@@ -161,7 +161,7 @@ multicluster:
     replicaCount: 1
     port: 9443
     image:
-      repository: oamdev/cluster-gateway
+      repository: registry.cn-hangzhou.aliyuncs.com/dtweave/cluster-gateway
       tag: v1.9.0-alpha.2
       pullPolicy: IfNotPresent
     resources:
@@ -258,7 +258,7 @@ admissionWebhooks:
   patch:
     enabled: true
     image:
-      repository: oamdev/kube-webhook-certgen
+      repository: registry.cn-hangzhou.aliyuncs.com/dtweave/kube-webhook-certgen
       tag: v2.4.1
       pullPolicy: IfNotPresent
     nodeSelector: {}

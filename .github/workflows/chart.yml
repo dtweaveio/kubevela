@@ -59,7 +59,7 @@ jobs:
           git config --global user.name "kubevela[bot]"
           git clone https://x-access-token:${{ steps.get_app_token.outputs.token }}@github.com/dtweaveio/kubevela-charts.git kubevela-charts
           helm package $HELM_CHART --destination ./kubevela-charts/docs/
-          helm repo index --url https://kubevela.github.io/charts ./kubevela-charts/docs/
+          helm repo index --url https://charts.dtweave.com/kubevela ./kubevela-charts/docs/
           cd kubevela-charts/
           git add docs/
           chart_version=${{ steps.get_version.outputs.VERSION }}
