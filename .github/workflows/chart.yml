@@ -57,11 +57,11 @@ jobs:
         run: |
           git config --global user.email "135009839+kubevela[bot]@users.noreply.github.com"
           git config --global user.name "kubevela[bot]"
-          git clone https://x-access-token:${{ steps.get_app_token.outputs.token }}@github.com/kubevela/charts.git kubevela-charts
+          git clone https://x-access-token:${{ steps.get_app_token.outputs.token }}@github.com/dtweaveio/kubevela-charts.git kubevela-charts
           helm package $HELM_CHART --destination ./kubevela-charts/docs/
           helm repo index --url https://kubevela.github.io/charts ./kubevela-charts/docs/
           cd kubevela-charts/
           git add docs/
           chart_version=${{ steps.get_version.outputs.VERSION }}
           git commit -m "update vela-core chart ${chart_version}"
-          git push https://x-access-token:${{ steps.get_app_token.outputs.token }}@github.com/kubevela/charts.git
+          git push https://x-access-token:${{ steps.get_app_token.outputs.token }}@github.com/dtweaveio/kubevela-charts.git
