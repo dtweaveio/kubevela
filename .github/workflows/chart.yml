@@ -50,8 +50,8 @@ jobs:
       - uses: jnwng/github-app-installation-token-action@v2
         id: get_app_token
         with:
-          appId: 340472
-          installationId: 38064967
+          appId: 971235
+          installationId: 53820300
           privateKey: ${{ secrets.GH_KUBEVELA_APP_PRIVATE_KEY }}
       - name: Sync Chart Repo
         run: |
