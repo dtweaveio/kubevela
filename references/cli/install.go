@@ -52,7 +52,7 @@ const (
 	// LegacyKubeVelaInstallerHelmRepoURL is used for kubevela version < v1.9.0
 	LegacyKubeVelaInstallerHelmRepoURL = "https://charts.kubevela.net/core/"
 	// KubeVelaInstallerHelmRepoURL is used for kubevela version >= v1.9.0
-	KubeVelaInstallerHelmRepoURL = "https://kubevela.github.io/charts/"
+	KubeVelaInstallerHelmRepoURL = "https://charts.dtweave.com/kubevela/"
 )
 
 // kubeVelaReleaseName release name
