@@ -62,8 +62,8 @@ jobs:
             VERSION=${{ steps.get_version.outputs.VERSION }}
             GOPROXY=https://proxy.golang.org
           tags: |-
-            docker.io/oamdev/vela-core:${{ steps.get_version.outputs.VERSION }}
-            ghcr.io/${{ github.repository_owner }}/oamdev/vela-core:${{ steps.get_version.outputs.VERSION }}
+            registry.cn-hangzhou.aliyuncs.com/dtweave/vela-core:${{ steps.get_version.outputs.VERSION }}
+#            ghcr.io/${{ github.repository_owner }}/oamdev/vela-core:${{ steps.get_version.outputs.VERSION }}
 
       - uses: docker/build-push-action@1a162644f9a7e87d8f4b053101d1d9a712edc18c # v6.3.0
         name: Build & Pushing CLI for Dockerhub, GHCR
@@ -80,5 +80,5 @@ jobs:
             VERSION=${{ steps.get_version.outputs.VERSION }}
             GOPROXY=https://proxy.golang.org
           tags: |-
-            docker.io/oamdev/vela-cli:${{ steps.get_version.outputs.VERSION }}
-            ghcr.io/${{ github.repository_owner }}/oamdev/vela-cli:${{ steps.get_version.outputs.VERSION }}
+            registry.cn-hangzhou.aliyuncs.com/dtweave/vela-cli:${{ steps.get_version.outputs.VERSION }}
+#            ghcr.io/${{ github.repository_owner }}/oamdev/vela-cli:${{ steps.get_version.outputs.VERSION }}
